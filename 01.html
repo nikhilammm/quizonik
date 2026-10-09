@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder</title>    
+    <link rel="stylesheet" href="./assets/quiz_style.css">
+    
+    <script>
+        const quizData = {
+          quiz_title: '3.5 Collision Theory & Transition State Theory',
+          questions: [
+            {
+              "question": "Collision theory provides a simple model for bimolecular reactions in the gas phase, predicting that the rate constant is proportional to the collision frequency and the fraction of collisions with sufficient energy. However, the observed rate constant is often much smaller than the collision frequency times the Boltzmann factor, even for reactions with low activation energies. What factor does collision theory introduce to account for this discrepancy, and what does this factor represent in terms of the molecular requirements for a successful reaction?",
+              "options": [
+                "Collision theory introduces the 'steric factor' (P) or 'orientation factor', which accounts for the fact that not all collisions with sufficient energy result in a reaction because the reactant molecules must have the correct relative orientation for the reaction to occur. The steric factor is typically less than 1 and reflects the geometric constraints of the reaction",
+                "Collision theory introduces the 'entropy factor', which accounts for the change in entropy during the reaction; this factor is always greater than 1 for reactions that proceed through a loose transition state",
+                "Collision theory introduces the 'transmission coefficient' (κ), which accounts for the probability that the reactants will cross the transition state barrier; this factor is always equal to 1 for reactions with no barriers",
+                "Collision theory introduces the 'frequency factor' (A), which is the collision frequency multiplied by the steric factor; the discrepancy is accounted for by a larger collision frequency than predicted by simple gas kinetic theory"
+              ],
+              "feedback": [
+                "This is correct. In collision theory, the rate constant for a bimolecular reaction is given by k = P Z e^{-Ea/RT}, where Z is the collision frequency (calculated from gas kinetic theory), P is the <b>steric factor</b> (or orientation factor), and e^{-Ea/RT} is the Boltzmann factor for molecules with energy greater than the activation energy. The steric factor P accounts for the fact that not all collisions with sufficient energy result in a reaction; the molecules must also have the <b>correct relative orientation</b> for the reaction to occur (e.g., the reactive bond must be aligned properly). P is typically less than 1 and can range from 1 (for reactions with no steric requirements) to values as small as 10⁻⁶ (for reactions that require very specific orientations). The steric factor reflects the geometric constraints of the reaction.",
+                "The entropy factor is related to transition state theory, not collision theory. In collision theory, the steric factor accounts for the orientation requirement, not the entropy change.",
+                "The transmission coefficient (κ) is a concept from transition state theory, not collision theory. In collision theory, the steric factor P accounts for the discrepancy.",
+                "The frequency factor A in the Arrhenius equation is related to P Z, but the discrepancy between the calculated and observed rates is accounted for by P, not by a larger Z. Z is calculated from gas kinetic theory and is well-defined."
+              ],
+              "answer": 0
+            },
+            {
+              "question": "In transition state theory, the rate constant for a reaction is expressed in terms of the equilibrium constant for the formation of the activated complex (transition state): k = (k_B T/h) K‡, where K‡ is the equilibrium constant for the formation of the transition state. The pre-exponential factor (k_B T/h) has units of s⁻¹ and represents the frequency of crossing the transition state barrier. If a student compares the rate constants for two reactions and finds that the first reaction has a larger pre-exponential factor (A) than the second, but the same activation energy, what does this imply about the entropy of activation (ΔS‡) for the two reactions?",
+              "options": [
+                "A larger pre-exponential factor A implies a more negative entropy of activation (ΔS‡) because A is inversely proportional to e^{ΔS‡/R}. The first reaction has a tighter transition state than the second",
+                "A larger pre-exponential factor A implies that the reaction is bimolecular, while a smaller A implies a unimolecular reaction; the entropy of activation is not related to A",
+                "A larger pre-exponential factor A implies a more positive entropy of activation (ΔS‡) because A is proportional to e^{ΔS‡/R}. The first reaction has a looser transition state (more disordered) than the second, leading to a larger A and a faster rate at a given temperature (assuming the same Ea)",
+                "A larger pre-exponential factor A implies a smaller activation energy, not a different entropy of activation; the entropy of activation is independent of A"
+              ],
+              "feedback": [
+                "A larger A implies a more positive, not more negative, ΔS‡. A negative ΔS‡ would give a smaller A (since e^{ΔS‡/R} < 1).",
+                "A does depend on the molecularity (there are additional factors for bimolecular reactions), but for reactions of the same molecularity, a larger A indicates a more positive ΔS‡.",
+                "This is correct. In transition state theory, the rate constant is k = (k_B T/h) e^{ΔS‡/R} e^{-ΔH‡/RT} (for a unimolecular reaction). The pre-exponential factor A is related to the entropy of activation by A ∝ e^{ΔS‡/R}. A <b>larger A</b> implies a <b>more positive ΔS‡</b>, meaning that the transition state is <b>more disordered</b> (looser) than the reactants. This leads to a larger rate constant at a given temperature (assuming the same enthalpy of activation, ΔH‡). A positive ΔS‡ is favorable for the reaction because it means the transition state has a higher entropy, which lowers the Gibbs free energy of activation (ΔG‡ = ΔH‡ - TΔS‡).",
+                "A is related to ΔS‡, not to Ea. Ea is related to ΔH‡ (or the energy barrier)."
+              ],
+              "answer": 2
+            },
+            {
+              "question": "Collision theory assumes that reactant molecules are hard spheres and that the reaction occurs when two molecules collide with sufficient energy and the correct orientation. However, for reactions between molecules that are not spherical, the collision cross-section is not simply the sum of the hard-sphere radii. If a student calculates the collision frequency for a reaction using the hard-sphere approximation and obtains a value that is much larger than the observed rate, what might be the reason for this discrepancy, and what correction can be applied?",
+              "options": [
+                "The discrepancy is due to the fact that the reaction is not bimolecular; the student must have used the wrong rate law",
+                "The discrepancy is due to the steric factor (P), which accounts for the orientation requirements of the non-spherical molecules. The steric factor is typically less than 1 and corrects the collision frequency to account for the fact that only a fraction of collisions have the correct orientation for the reaction to occur",
+                "The discrepancy is due to the fact that the collision frequency does not account for the energy distribution of the molecules; the fraction of molecules with sufficient energy is overestimated",
+                "The discrepancy is due to the fact that the hard-sphere approximation overestimates the collision frequency because the molecules are not hard spheres; they have attractive and repulsive interactions that affect the collision cross-section. The correction is to use a more realistic potential energy surface (e.g., Lennard-Jones potential) to calculate the collision rate"
+              ],
+              "feedback": [
+                "The reaction could be bimolecular, but the hard-sphere approximation gives an upper limit for the collision frequency. The discrepancy is due to orientation effects, not the wrong rate law.",
+                "This is correct. The hard-sphere approximation in collision theory assumes that molecules are spherical and that any collision with sufficient energy leads to reaction (if the energy requirement is met). However, most molecules are not spherical, and the reaction requires a <b>specific orientation</b> of the reactants (e.g., the reactive bonds must align). The steric factor P (also called the probability factor or orientation factor) is introduced to correct the collision frequency: k = P Z e^{-Ea/RT}. P is typically less than 1 and accounts for the fraction of collisions that have the correct orientation. For non-spherical molecules, P can be very small (e.g., 10⁻² to 10⁻⁶) for reactions that require precise alignment.",
+                "The Boltzmann factor e^{-Ea/RT} already accounts for the fraction of molecules with sufficient energy. The discrepancy is due to the orientation requirement, not the energy distribution.",
+                "While intermolecular interactions do affect the collision dynamics, the primary correction for orientation requirements is the steric factor P. The hard-sphere approximation already assumes no interactions; the steric factor is the standard correction."
+              ],
+              "answer": 1
+            },
+            {
+              "question": "Transition state theory (TST) assumes that the reactants are in equilibrium with the activated complex (transition state) and that the transition state is a saddle point on the potential energy surface. The rate of reaction is determined by the rate at which the activated complex crosses the barrier. However, TST has limitations, especially for reactions that occur at high pressures or in solution. One limitation is that TST ignores the possibility that the activated complex may recross the barrier multiple times before proceeding to products. What is the factor that accounts for this recrossing, and how does it affect the predicted rate constant?",
+              "options": [
+                "The transmission coefficient (κ) is the same as the steric factor (P) in collision theory; it accounts for the orientation of the reactants and is always less than 1",
+                "The transmission coefficient (κ) is always greater than 1 because the activated complex can tunnel through the barrier, increasing the rate; this effect is most significant for light atoms (e.g., hydrogen)",
+                "The transmission coefficient (κ) accounts for the probability that the activated complex crosses the barrier to products rather than recrossing back to reactants. κ is typically less than 1, and it reduces the predicted rate constant from TST. In the limit of no recrossing, κ = 1, and TST gives the maximum rate",
+                "The transmission coefficient (κ) accounts for the symmetry of the reaction; it is always equal to 1 for reactions with a single transition state"
+              ],
+              "feedback": [
+                "The steric factor P is from collision theory, not TST. The transmission coefficient κ is a different concept.",
+                "Quantum tunneling is a separate effect that can increase the rate (κ > 1 for tunneling), but the classical transmission coefficient accounts for recrossing and is typically ≤ 1.",
+                "This is correct. In transition state theory, the <b>transmission coefficient (κ)</b> is a correction factor that accounts for the possibility that the activated complex (transition state) may <b>recross</b> the barrier back to reactants instead of proceeding to products. In the classical TST, it is assumed that all trajectories that reach the transition state proceed to products (i.e., no recrossing). In reality, some trajectories may recross the barrier, especially in solution or at high pressures, where collisions can cause the system to return to the reactant side. The transmission coefficient κ is typically <b>less than 1</b>, and the observed rate constant is given by k = κ × (k_B T/h) K‡. In the limit of no recrossing, κ = 1, and TST gives the maximum possible rate (the upper bound). For some reactions, κ can be greater than 1 if quantum tunneling is significant, but in classical TST, κ ≤ 1.",
+                "The transmission coefficient does not account for symmetry; symmetry is accounted for by the symmetry number in the partition functions."
+              ],
+              "answer": 2
+            },
+            {
+              "question": "Collision theory predicts that the rate constant for a bimolecular reaction is proportional to the collision frequency Z and the Boltzmann factor e^{-Ea/RT}. However, for reactions between large molecules, the steric factor P can be very small (e.g., 10⁻⁶). What does a very small steric factor imply about the reaction mechanism, and what type of reaction would have a steric factor close to 1?",
+              "options": [
+                "A very small steric factor implies that the reaction is diffusion-controlled; the rate is limited by the diffusion of the molecules, not by the collision frequency",
+                "A very small steric factor implies that the reaction has a very high activation energy; the steric factor is inversely proportional to the activation energy",
+                "A very small steric factor implies that the reaction has very strict orientation requirements; the reactants must approach each other in a very specific geometry for the reaction to occur. This is typical for reactions involving large, complex molecules (e.g., enzyme-catalyzed reactions or organic reactions with bulky substituents). A steric factor close to 1 is typical for simple reactions involving small, spherical molecules (e.g., the recombination of atoms or small radicals) where orientation is not important",
+                "A very small steric factor implies that the reaction is unimolecular; the steric factor is only defined for unimolecular reactions, and a small P indicates a loose transition state"
+              ],
+              "feedback": [
+                "Diffusion-controlled reactions are typically fast and have P close to 1 (or the rate is determined by diffusion, not by the collision frequency). A small P indicates an orientation constraint, not diffusion control.",
+                "The steric factor is not related to the activation energy; it is a separate factor that accounts for the orientation requirement. A reaction can have a low activation energy but a very small P (e.g., if the reaction requires precise alignment).",
+                "This is correct. The steric factor P (also called the probability factor) accounts for the <b>orientation requirements</b> of the reaction. For reactions between <b>large, complex molecules</b> (e.g., organic reactions, enzyme-substrate reactions, or reactions with bulky substituents), the reactants must approach each other in a very specific geometry for the reactive bonds to align properly. This results in a very small P (e.g., 10⁻² to 10⁻⁶). For <b>simple reactions</b> involving small, spherical molecules (e.g., the recombination of atoms like 2H → H₂, or small radicals), the orientation requirements are minimal, and P is close to 1. The steric factor reflects the geometric constraints of the reaction.",
+                "The steric factor is defined for bimolecular reactions in collision theory. For unimolecular reactions, the concept of a steric factor is not directly applicable (though the pre-exponential factor can be related to the entropy of activation)."
+              ],
+              "answer": 2
+            },
+            {
+              "question": "In transition state theory, the rate constant is expressed as k = (k_B T/h) K‡, where K‡ is the equilibrium constant for the formation of the transition state. The pre-exponential factor (k_B T/h) is about 6 × 10¹² s⁻¹ at room temperature. If a student measures the rate constant for a unimolecular reaction and finds that it is much smaller than 6 × 10¹² s⁻¹, what does this indicate about the entropy of activation (ΔS‡) and the nature of the transition state?",
+              "options": [
+                "A rate constant much smaller than (k_B T/h) indicates that the activation energy is very high; the entropy of activation is not relevant because the rate constant is dominated by the exponential term",
+                "A rate constant much smaller than (k_B T/h) indicates a positive entropy of activation (ΔS‡ > 0), meaning that the transition state is more disordered (looser) than the reactants",
+                "A rate constant much smaller than (k_B T/h) indicates a negative entropy of activation (ΔS‡ < 0), meaning that the transition state is more ordered (tighter) than the reactants. This results in a small equilibrium constant K‡ and a smaller rate constant",
+                "A rate constant much smaller than (k_B T/h) indicates that the reaction is not unimolecular; the student must have used the wrong rate law"
+              ],
+              "feedback": [
+                "A high activation energy would also reduce the rate constant through the exponential term e^{-ΔH‡/RT}, but a rate constant much smaller than (k_B T/h) could be due to either a high ΔH‡ or a negative ΔS‡ (or both). The question specifically asks about the entropy of activation, and a small rate constant relative to (k_B T/h) indicates a negative ΔS‡.",
+                "A positive ΔS‡ would give e^{ΔS‡/R} > 1, which would make the rate constant larger than (k_B T/h) (unless the activation energy is very high). A small rate constant indicates a negative ΔS‡.",
+                "This is correct. In transition state theory, the rate constant for a unimolecular reaction is k = (k_B T/h) e^{ΔS‡/R} e^{-ΔH‡/RT} (ignoring the transmission coefficient). The pre-exponential factor (k_B T/h) ≈ 6 × 10¹² s⁻¹ at 298 K. If the measured rate constant is much smaller than this value, it indicates that the exponential term e^{ΔS‡/R} is very small, which means ΔS‡ is <b>negative</b> (since e^{ΔS‡/R} < 1 when ΔS‡ < 0). A negative ΔS‡ indicates that the <b>transition state is more ordered</b> (tighter) than the reactants. This could be due to loss of translational or rotational degrees of freedom upon forming the transition state, or the formation of a rigid transition state. This reduces the equilibrium constant K‡ and thus the rate constant.",
+                "The reaction could be unimolecular; the small rate constant is consistent with a negative ΔS‡ and/or a high activation energy."
+              ],
+              "answer": 2
+            },
+            {
+              "question": "Collision theory provides a simple model for predicting the rate constant of a bimolecular reaction, but it fails for reactions that involve the formation of a reactive intermediate or for reactions that proceed through a multiple-step mechanism. For a reaction that occurs through a pre-equilibrium formation of an intermediate, how would the observed rate constant differ from the prediction of simple collision theory, and what additional factor must be considered?",
+              "options": [
+                "For a reaction that proceeds through a pre-equilibrium (e.g., A + B ⇌ AB* (fast), AB* → products (slow)), the observed rate constant is the product of the equilibrium constant for the formation of the intermediate and the rate constant for the decay of the intermediate: k_obs = K_eq × k_2. Collision theory would only predict the rate of the bimolecular collision, not the subsequent chemistry. The observed rate constant may be much smaller than the collision frequency because the intermediate formation is not the rate-limiting step, and the equilibrium constant can be small",
+                "For a reaction with a pre-equilibrium, the observed rate constant is independent of the collision frequency; the rate is determined solely by the rate of the slow step, and collision theory is not applicable",
+                "Collision theory would predict the correct rate constant because the reaction is still bimolecular; the intermediate formation is fast, and the rate is determined by the collision of A and B",
+                "For a reaction with a pre-equilibrium, the observed rate constant is the sum of the forward and reverse rate constants; collision theory would predict a larger rate constant because it does not account for the reverse reaction"
+              ],
+              "feedback": [
+                "This is correct. For a reaction that proceeds through a pre-equilibrium: A + B ⇌ AB* (fast), followed by AB* → products (slow), the observed rate law is rate = k_2 [AB*] = k_2 K_eq [A][B], where K_eq = k₁/k₋₁ is the equilibrium constant for the formation of the intermediate. The observed rate constant is k_obs = k_2 K_eq. Collision theory would predict a rate constant based on the collision frequency of A and B (Z e^{-Ea/RT}), but the actual rate is determined by the <b>equilibrium constant</b> for the formation of the intermediate and the <b>rate of decay</b> of the intermediate. The observed rate constant can be much smaller than the collision frequency because the intermediate concentration is limited by the equilibrium (K_eq may be small), and the decay step (k₂) may be slow. Collision theory does not account for the pre-equilibrium.",
+                "The rate does depend on the collision frequency through the equilibrium constant K_eq (which includes the collision frequency for the forward step), but the observed rate constant is not simply the collision frequency; it includes the equilibrium constant and the slow step rate constant.",
+                "Collision theory does not predict the correct rate constant for a reaction with a pre-equilibrium because the rate is not simply the collision frequency; the formation of the intermediate is a pre-equilibrium, and the rate is determined by the slow step (decay of the intermediate).",
+                "The observed rate constant is not the sum of the forward and reverse rate constants; it is the product of the equilibrium constant and the rate constant of the slow step. The reverse reaction is accounted for in the equilibrium constant."
+              ],
+              "answer": 0
+            },
+            {
+              "question": "In transition state theory, the rate constant is related to the Gibbs free energy of activation (ΔG‡) by the equation k = (k_B T/h) e^{-ΔG‡/RT}. If a student measures the rate constant at two different temperatures and determines ΔG‡, how does ΔG‡ change with temperature, and what is the relationship between ΔG‡, ΔH‡, and ΔS‡?",
+              "options": [
+                "ΔG‡ is independent of temperature; it is a constant for a given reaction",
+                "ΔG‡ is determined solely by ΔH‡; ΔS‡ has no effect on ΔG‡ because the entropy term is negligible",
+                "The Gibbs free energy of activation is temperature-dependent: ΔG‡ = ΔH‡ - TΔS‡. As temperature increases, ΔG‡ changes depending on the sign of ΔS‡. If ΔS‡ is positive, ΔG‡ decreases with increasing temperature, and the rate constant increases more rapidly than predicted by the exponential term alone. If ΔS‡ is negative, ΔG‡ increases with temperature, and the rate increase is less steep",
+                "ΔG‡ = ΔH‡ + TΔS‡, so ΔG‡ always increases with temperature because TΔS‡ is positive"
+              ],
+              "feedback": [
+                "ΔG‡ is not independent of temperature; it depends on ΔS‡, which is generally temperature-independent over a limited range, but the TΔS‡ term makes ΔG‡ temperature-dependent.",
+                "ΔS‡ does affect ΔG‡ through the TΔS‡ term. It is not negligible; it can significantly affect the temperature dependence of the rate constant.",
+                "This is correct. In transition state theory, the Gibbs free energy of activation is given by ΔG‡ = ΔH‡ - TΔS‡, where ΔH‡ is the enthalpy of activation (related to the activation energy) and ΔS‡ is the entropy of activation. Therefore, ΔG‡ is <b>temperature-dependent</b>. If ΔS‡ is <b>positive</b>, the term -TΔS‡ becomes more negative as T increases, so ΔG‡ <b>decreases</b> with increasing temperature. This makes the exponential term e^{-ΔG‡/RT} increase more rapidly than the 1/T factor, leading to a stronger temperature dependence of the rate constant. If ΔS‡ is <b>negative</b>, ΔG‡ <b>increases</b> with temperature (since -TΔS‡ becomes more positive), partially offsetting the increase in the rate constant due to the temperature factor. This is why reactions with positive ΔS‡ have larger pre-exponential factors (A) and show stronger temperature dependence.",
+                "The relationship is ΔG‡ = ΔH‡ - TΔS‡, not ΔH‡ + TΔS‡. The sign is important; a positive ΔS‡ makes ΔG‡ decrease with increasing temperature."
+              ],
+              "answer": 2
+            },
+            {
+              "question": "Collision theory predicts that the rate constant for a bimolecular reaction is given by k = P Z e^{-Ea/RT}, where Z is the collision frequency. For a reaction between two different molecules A and B, the collision frequency Z_AB is proportional to the relative velocity of the molecules and the collision cross-section. If the temperature is increased, how does the collision frequency Z_AB change, and how does this compare to the change in the exponential term e^{-Ea/RT}?",
+              "options": [
+                "The collision frequency Z_AB increases with temperature, but the increase is relatively small (approximately proportional to √T for hard spheres). The exponential term e^{-Ea/RT} increases much more dramatically with temperature, especially for reactions with large Ea. The temperature dependence of the rate constant is dominated by the exponential term, not by the collision frequency",
+                "The collision frequency Z_AB is independent of temperature because the collision cross-section and the relative velocity cancel out; the exponential term is the only temperature-dependent term",
+                "The collision frequency Z_AB decreases with increasing temperature because the molecules move faster and have less time to collide; the exponential term also decreases with temperature, so the rate constant decreases",
+                "The collision frequency Z_AB increases with temperature, and this increase is comparable to the increase in the exponential term; both contribute equally to the temperature dependence of the rate constant"
+              ],
+              "feedback": [
+                "This is correct. In collision theory, the collision frequency Z_AB is given by Z_AB = σ (8π k_B T/μ)^{1/2} [A][B] (for the number of collisions per unit volume per unit time). The temperature dependence of Z_AB is proportional to √T (since the average relative velocity is proportional to √T). This is a relatively weak temperature dependence. In contrast, the exponential term e^{-Ea/RT} has a much stronger temperature dependence, especially when Ea is large. The overall temperature dependence of the rate constant is dominated by the <b>exponential term</b>, and the contribution of the √T factor is often neglected when analyzing Arrhenius plots (except for the extended Arrhenius equation). The rate constant increases much more rapidly with temperature due to the exponential term than due to the collision frequency.",
+                "Z_AB does depend on temperature through the relative velocity (√T). It is not independent of temperature.",
+                "Z_AB increases with temperature (√T), not decreases. The exponential term increases with temperature (for Ea > 0), so the rate constant increases.",
+                "The increase in Z_AB (√T) is much smaller than the increase in the exponential term for typical activation energies. The exponential term dominates the temperature dependence."
+              ],
+              "answer": 0
+            },
+            {
+              "question": "Transition state theory (TST) provides a more rigorous framework than collision theory by considering the potential energy surface and the partition functions of the reactants and the transition state. The rate constant from TST is k = (k_B T/h) (Q‡/Q_A Q_B) e^{-E_0/RT}, where Q's are partition functions. For a bimolecular reaction, the pre-exponential factor depends on the ratio of the partition functions of the transition state and the reactants. If the transition state is very tight (i.e., many vibrational modes are lost), how would the pre-exponential factor be affected, and what would be the sign of the entropy of activation?",
+              "options": [
+                "If the transition state is very tight, the pre-exponential factor is larger because the transition state is more stable; the entropy of activation is positive",
+                "If the transition state is very tight (rigid), the partition function of the transition state is smaller than that of the reactants (especially the translational and rotational partition functions are reduced). This leads to a smaller pre-exponential factor A and a negative entropy of activation (ΔS‡ < 0), indicating a more ordered transition state",
+                "If the transition state is very tight, the partition function of the transition state is larger because the vibrational frequencies are higher, leading to a larger A and a positive ΔS‡",
+                "If the transition state is very tight, the pre-exponential factor is unaffected because the translational partition functions cancel out; the entropy of activation is zero"
+              ],
+              "feedback": [
+                "A tight transition state is not more stable in terms of entropy; it is more ordered, leading to a smaller A and a negative ΔS‡.",
+                "This is correct. The pre-exponential factor in TST is proportional to the ratio of the partition function of the transition state (Q‡) to the product of the partition functions of the reactants (Q_A Q_B). A <b>tight</b> transition state (rigid, with many vibrations and restricted rotations) has a <b>smaller</b> partition function compared to a loose transition state. This leads to a <b>smaller</b> pre-exponential factor A and a <b>negative entropy of activation</b> (ΔS‡ < 0), because the transition state is more ordered (lower entropy) than the reactants. The negative ΔS‡ means that the formation of the transition state is entropically unfavorable, reducing the rate constant.",
+                "A tight transition state has a smaller partition function, not larger. Higher vibrational frequencies mean fewer thermally accessible states, so the partition function is smaller.",
+                "The translational partition functions do not completely cancel; the loss of translational degrees of freedom upon forming the transition state contributes to a negative ΔS‡. The pre-exponential factor is affected."
+              ],
+              "answer": 1
+            },
+            {
+              "question": "Collision theory can be extended to reactions in solution by considering the 'encounter complex' or 'cage effect.' In solution, the reactants are surrounded by solvent molecules, and they may undergo multiple collisions within a solvent cage before separating. This can increase the probability of reaction compared to the gas phase. How does the cage effect affect the observed rate constant for a diffusion-controlled reaction in solution, and what is the relationship between the rate constant and the diffusion coefficients?",
+              "options": [
+                "In solution, the rate of a diffusion-controlled reaction is determined by the rate at which the reactants diffuse together. The rate constant is proportional to the sum of the diffusion coefficients of the reactants: k ≈ 4π (D_A + D_B) r (for a reaction with a reaction radius r). The cage effect increases the effective encounter time, which can increase the probability of reaction, but the overall rate is still limited by diffusion",
+                "The cage effect has no effect on the rate constant in solution; the rate constant is the same as in the gas phase because the collision frequency is the same",
+                "The cage effect decreases the rate constant because the solvent cage traps the reactants, preventing them from reacting; the rate constant is inversely proportional to the diffusion coefficients",
+                "The cage effect increases the rate constant because the solvent cage brings the reactants together and holds them in close proximity, increasing the probability of reaction; the rate constant is proportional to the square of the diffusion coefficients"
+              ],
+              "feedback": [
+                "This is correct. In solution, the rate of a diffusion-controlled reaction is limited by the rate at which the reactants encounter each other. The rate constant for a diffusion-controlled reaction is given by the Smoluchowski equation: k ≈ 4π (D_A + D_B) r (for a reaction with a capture radius r), where D_A and D_B are the diffusion coefficients of the reactants. The <b>cage effect</b> refers to the fact that the reactants, once they encounter each other, are surrounded by solvent molecules and may undergo multiple collisions (or remain in close proximity) before separating. This can increase the <b>probability</b> of reaction (if the reaction has a low activation energy), but the overall rate is still limited by the diffusion rate (the rate at which the reactants come together). The rate constant is proportional to the sum of the diffusion coefficients, which depend on the viscosity of the solvent (D ∝ 1/η).",
+                "The rate constant in solution is different from the gas phase because the diffusion of molecules in solution is much slower than in the gas phase. The rate is limited by diffusion, not by the gas-phase collision frequency.",
+                "The cage effect does not decrease the rate; it can increase the probability of reaction within the encounter complex. The rate is still diffusion-limited, but the effective encounter time is increased.",
+                "The rate constant is proportional to the sum of the diffusion coefficients, not the square. The cage effect increases the probability of reaction within the encounter, but the overall rate is proportional to the diffusion rate."
+              ],
+              "answer": 0
+            },
+            {
+              "question": "In transition state theory, the rate constant is expressed as k = (k_B T/h) e^{ΔS‡/R} e^{-ΔH‡/RT}. If a student determines the activation parameters for a reaction and finds that ΔH‡ is large and positive, but ΔS‡ is also large and positive, what can they conclude about the reaction mechanism, and how does the entropy compensation effect relate to this?",
+              "options": [
+                "A large positive ΔH‡ and a large positive ΔS‡ indicate that the reaction is very slow because both the enthalpy and entropy barriers are high; the rate constant is very small",
+                "A large positive ΔH‡ and a large positive ΔS‡ indicate that the reaction is diffusion-controlled; the activation parameters are artifacts of the diffusion process",
+                "A large positive ΔH‡ indicates a significant energy barrier (strong bonds must be broken), while a large positive ΔS‡ indicates a loose transition state with many accessible configurations (e.g., a bond-breaking reaction that creates more degrees of freedom). The entropy compensation effect refers to the observation that in many reactions, a large ΔH‡ is often accompanied by a large (positive or negative) ΔS‡, partially compensating the effect on ΔG‡. This can lead to a relatively moderate rate constant despite large individual activation parameters",
+                "A large positive ΔH‡ and a large positive ΔS‡ indicate that the reaction is very fast because the positive entropy of activation dominates the rate; the enthalpy barrier is overcome by the entropy"
+              ],
+              "feedback": [
+                "A large positive ΔS‡ actually makes the reaction faster (since it lowers ΔG‡). The rate is not necessarily very slow; the enthalpy barrier is high, but the entropy effect partially compensates.",
+                "Diffusion-controlled reactions typically have small activation parameters. Large ΔH‡ and ΔS‡ are characteristic of chemically controlled reactions, not diffusion-controlled ones.",
+                "This is correct. A large positive ΔH‡ indicates a <b>high energy barrier</b> (e.g., breaking a strong bond). A large positive ΔS‡ indicates that the transition state is <b>loose</b> (more disordered) than the reactants, meaning that the formation of the transition state creates more degrees of freedom (e.g., bond breaking that releases constraints). The <b>entropy compensation effect</b> is a phenomenon where a large positive ΔH‡ is often accompanied by a large positive ΔS‡ (or a large negative ΔH‡ with a large negative ΔS‡), so that the changes in ΔH‡ and ΔS‡ partially <b>compensate</b> each other in the Gibbs free energy of activation: ΔG‡ = ΔH‡ - TΔS‡. This can lead to a relatively moderate ΔG‡ and a moderate rate constant, even though the individual ΔH‡ and ΔS‡ are large. This is observed in many reactions, especially in solution and enzyme-catalyzed reactions.",
+                "A large positive ΔS‡ does make the reaction faster (lowers ΔG‡), but the enthalpy barrier is still high. The rate is determined by ΔG‡, which is a balance between ΔH‡ and -TΔS‡. The rate is not necessarily very fast; it depends on the net ΔG‡."
+              ],
+              "answer": 2
+            },
+            {
+              "question": "Collision theory can be used to estimate the rate constant for a bimolecular reaction if the steric factor P and the activation energy Ea are known. However, collision theory assumes that the reactants are hard spheres and that the reaction occurs upon a single collision. For reactions that involve the formation of a long-lived complex (e.g., a 'sticky' collision), the rate may be higher than predicted by collision theory because the complex has multiple opportunities to react. How does the formation of a long-lived complex affect the observed rate constant, and how can this be understood in terms of the pre-equilibrium approximation?",
+              "options": [
+                "The formation of a long-lived complex decreases the rate because the complex is trapped and cannot react; the observed rate constant is smaller than the single-collision prediction",
+                "If the reactants form a long-lived complex (A + B ⇌ AB*), the rate of reaction can be enhanced because the complex persists for a longer time, allowing multiple chances for the reaction to occur (or for the complex to rearrange to products). The observed rate constant is k_obs = k_2 K_eq, where K_eq is the equilibrium constant for the formation of the complex. This can lead to a rate constant that is larger than the single-collision prediction if the complex formation is favorable",
+                "The formation of a long-lived complex is equivalent to a high steric factor; the observed rate constant is multiplied by the steric factor, which can be greater than 1",
+                "The formation of a long-lived complex does not affect the rate constant because the rate is determined by the initial collision, regardless of the complex lifetime"
+              ],
+              "feedback": [
+                "A long-lived complex does not decrease the rate; it provides more opportunities for reaction, which can increase the rate if the complex formation is favorable.",
+                "This is correct. If the reactants form a <b>long-lived complex</b> (or an encounter complex), the reaction can occur through a pre-equilibrium mechanism: A + B ⇌ AB* (fast), followed by AB* → products (slow). The observed rate constant is k_obs = k_2 K_eq, where K_eq is the equilibrium constant for the formation of the complex (K_eq = [AB*]/([A][B])). If the complex formation is favorable (K_eq is large), the concentration of the complex is high, and the observed rate constant can be <b>larger</b> than the single-collision prediction from collision theory. The long lifetime of the complex provides <b>multiple opportunities</b> for the reaction to occur, increasing the effective rate. This is the basis for the pre-equilibrium approximation and is important in reactions involving intermediates or solvent cages.",
+                "The formation of a long-lived complex is not the same as a steric factor. The steric factor accounts for orientation, while the complex formation is a pre-equilibrium that affects the effective rate constant.",
+                "The rate does depend on the complex lifetime; if the complex persists, the probability of reaction increases, and the rate constant is higher."
+              ],
+              "answer": 1
+            },
+            {
+              "question": "In transition state theory, the rate constant is given by k = (k_B T/h) K‡, where K‡ is the equilibrium constant for the formation of the transition state. The equilibrium constant K‡ can be expressed in terms of the partition functions of the transition state and the reactants. If a student is studying a reaction in the gas phase and wants to compare the rate constants for two isotopic variants (e.g., H + H₂ vs. D + D₂), how would the isotope effect manifest in the transition state theory expression, and what factor would be different?",
+              "options": [
+                "The isotope effect would cancel out in the transition state theory expression because the partition functions of the transition state and the reactants both contain the mass, and the ratio is mass-independent",
+                "The isotope effect would primarily manifest in the partition functions, especially the vibrational partition functions (which depend on the reduced mass and the vibrational frequencies) and the translational partition functions (which depend on the mass). The rate constant for the heavier isotope (D + D₂) would be smaller because the zero-point energy is lower, making the activation energy effectively higher, and the translational partition functions are also smaller, reducing the pre-exponential factor",
+                "The isotope effect would only affect the pre-exponential factor (through the reduced mass), not the activation energy; the rate constant for the heavier isotope would be larger because the collision frequency is higher",
+                "The isotope effect would only affect the activation energy (Ea); the partition functions would be the same for both isotopes because the electronic structure is the same"
+              ],
+              "feedback": [
+                "The isotope effect does not cancel out; the masses appear in both the reactants and the transition state, but the ratio of partition functions is not mass-independent because the vibrational frequencies and the zero-point energies differ.",
+                "This is correct. Isotopic substitution affects the <b>partition functions</b> because the masses of the atoms change. The vibrational frequencies depend on the reduced mass (ω ∝ μ^{-1/2}), so heavier isotopes have <b>lower</b> vibrational frequencies and thus <b>lower zero-point energies</b>. This means that the zero-point energy of the reactants (and the transition state) changes, which affects the activation energy (ΔE_0). Additionally, the translational partition functions depend on the mass (q_trans ∝ m^{3/2}), so the pre-exponential factor is also affected. The overall effect is that reactions involving heavier isotopes typically have <b>smaller</b> rate constants (a normal isotope effect) because the zero-point energy is lower, making the activation energy effectively higher, and the translational partition functions are smaller. The isotope effect is a combination of changes in both the pre-exponential factor and the activation energy.",
+                "The activation energy is also affected (through zero-point energy), not just the pre-exponential factor. The rate constant for the heavier isotope is generally smaller, not larger.",
+                "The partition functions do depend on the mass, so they are affected by isotopic substitution. The activation energy is also affected through the zero-point energy changes."
+              ],
+              "answer": 1
+            },
+            {
+              "question": "Collision theory predicts that the rate constant for a bimolecular reaction is k = P Z e^{-Ea/RT}. For a reaction between two atoms (e.g., H + H → H₂), the steric factor P is expected to be close to 1 because atoms are spherical and have no orientation requirements. However, for a reaction between two complex molecules, P can be very small. If a student determines the steric factor for a reaction and finds it to be 10⁻⁶, what does this imply about the molecularity of the reaction and the entropy of activation?",
+              "options": [
+                "A steric factor of 10⁻⁶ implies that the reaction is diffusion-controlled, and the steric factor accounts for the diffusion-limited rate",
+                "A steric factor of 10⁻⁶ implies that the reaction is actually unimolecular, and the collision theory is not applicable; the steric factor is only valid for bimolecular reactions",
+                "A steric factor of 10⁻⁶ implies that the reaction has a very high activation energy, and the steric factor is inversely proportional to the activation energy",
+                "A steric factor of 10⁻⁶ is very small and implies that the reaction requires a highly specific orientation of the reactants, which corresponds to a large negative entropy of activation (ΔS‡). The molecularity of the reaction is still bimolecular, but the orientation requirement severely reduces the fraction of successful collisions"
+              ],
+              "feedback": [
+                "Diffusion-controlled reactions typically have P close to 1 (or the rate is determined by diffusion, not by the steric factor). A small P indicates an orientation constraint, not diffusion control.",
+                "The steric factor is applicable to bimolecular reactions. A very small P does not imply a unimolecular reaction; it implies a strict orientation requirement.",
+                "The steric factor is independent of the activation energy; it is a separate factor that accounts for the orientation requirement. A reaction can have a low activation energy but a very small P if the orientation requirement is strict.",
+                "This is correct. A very small steric factor (P = 10⁻⁶) indicates that only a tiny fraction of collisions with sufficient energy actually lead to reaction. This is because the reactants must have a <b>very specific orientation</b> for the reaction to occur. In transition state theory, a small P corresponds to a <b>negative entropy of activation</b> (ΔS‡ < 0) because the transition state is more ordered (tighter) than the reactants; many degrees of freedom are lost upon forming the activated complex. The reaction is still bimolecular (two molecules colliding), but the orientation requirement severely reduces the effective collision frequency. This is typical for reactions between large, complex molecules (e.g., many organic reactions) where the reactive bonds must align precisely."
+              ],
+              "answer": 3
+            },
+            {
+              "question": "In transition state theory, the rate constant is expressed as k = (k_B T/h) e^{-ΔG‡/RT}. The Gibbs free energy of activation (ΔG‡) is the difference in free energy between the transition state and the reactants. If a student measures the rate constant at several temperatures and obtains ΔH‡ and ΔS‡ from an Eyring plot (ln(k/T) vs. 1/T), what is the slope and intercept of the Eyring plot, and how are they related to the activation parameters?",
+              "options": [
+                "The Eyring plot is ln(k/T) = -ΔH‡/(R) × (1/T) + [ln(k_B/h) + ΔS‡/R]. The slope is -ΔH‡/R, and the intercept is ln(k_B/h) + ΔS‡/R. From the slope, ΔH‡ can be determined; from the intercept, ΔS‡ can be determined",
+                "The Eyring plot is ln(k) = -ΔG‡/(R) × (1/T) + ln(k_B/h). The slope is -ΔG‡/R, and the intercept is ln(k_B/h)",
+                "The Eyring plot is ln(k/T) = -ΔH‡/(R) × (1/T) + ln(k_B/h) - ΔS‡/R. The slope is -ΔH‡/R, and the intercept is ln(k_B/h) - ΔS‡/R",
+                "The Eyring plot is ln(k) = -ΔH‡/(R) × (1/T) + [ln(k_B/h) + ΔS‡/R]. The slope is -ΔH‡/R, and the intercept is ln(k_B/h) + ΔS‡/R"
+              ],
+              "feedback": [
+                "This is correct. The Eyring equation (for a unimolecular reaction) is k = (k_B T/h) e^{ΔS‡/R} e^{-ΔH‡/RT}. Taking the natural logarithm and rearranging: ln(k/T) = -ΔH‡/R × (1/T) + [ln(k_B/h) + ΔS‡/R]. A plot of ln(k/T) vs. 1/T gives a straight line with a <b>slope of -ΔH‡/R</b> and an <b>intercept of ln(k_B/h) + ΔS‡/R</b>. From the slope, the enthalpy of activation (ΔH‡) can be determined. From the intercept, the entropy of activation (ΔS‡) can be determined (since ln(k_B/h) is known). This is the standard method for determining the activation parameters from temperature-dependent rate data.",
+                "The Eyring plot uses ln(k/T) vs. 1/T, not ln(k) vs. 1/T. The Gibbs free energy of activation is not directly obtained from the slope; the enthalpy is obtained from the slope.",
+                "The intercept is ln(k_B/h) + ΔS‡/R, not ln(k_B/h) - ΔS‡/R. The sign is positive because k = (k_B T/h) e^{ΔS‡/R} e^{-ΔH‡/RT}.",
+                "The Eyring plot uses ln(k/T) vs. 1/T, not ln(k) vs. 1/T. The intercept is ln(k_B/h) + ΔS‡/R, and the slope is -ΔH‡/R."
+              ],
+              "answer": 0
+            },
+            {
+              "question": "Collision theory is based on the hard-sphere model, which assumes that molecules are spherical and that the collision cross-section is the sum of the radii of the colliding molecules. However, for reactions involving molecules with long-range attractive forces (e.g., ion-molecule reactions), the collision cross-section can be much larger than the hard-sphere cross-section. This is because the attractive forces pull the molecules together, increasing the capture probability. What is the name of the theory that accounts for these long-range forces, and how does it affect the rate constant?",
+              "options": [
+                "The theory that accounts for long-range forces is the 'transition state theory' with a loose transition state; it predicts that the rate constant is inversely proportional to the temperature",
+                "The theory that accounts for long-range forces is the 'activated complex theory' which uses a different steric factor; the rate constant is always smaller than the hard-sphere prediction",
+                "The theory that accounts for long-range forces is the 'diffusion-controlled theory,' which is only valid in solution, not in the gas phase",
+                "The theory that accounts for long-range attractive forces in ion-molecule and polar molecule reactions is the 'capture theory' or 'Langevin theory' (for ion-molecule reactions) or the 'ion-dipole capture theory.' These theories predict that the rate constant is temperature-independent or has a weak temperature dependence, and the rate constant can be much larger than the hard-sphere prediction due to the long-range attractive forces"
+              ],
+              "feedback": [
+                "Transition state theory with a loose transition state can describe these reactions, but the specific theories for ion-molecule reactions are the capture theories (Langevin, ion-dipole).",
+                "The rate constant for ion-molecule reactions is often larger than the hard-sphere prediction, not smaller.",
+                "Diffusion-controlled theory applies to reactions in solution, but the capture theories are for gas-phase ion-molecule reactions.",
+                "This is correct. For ion-molecule reactions (e.g., A⁺ + B → products), the long-range ion-induced dipole or ion-dipole attractive forces can significantly increase the capture cross-section compared to the hard-sphere prediction. The <b>Langevin theory</b> (for ion-induced dipole interactions) and the <b>ion-dipole capture theory</b> predict that the rate constant is <b>independent of temperature</b> (or has a weak T^{-1/2} dependence for ion-dipole), and the rate constant is larger than the hard-sphere prediction. These theories are examples of <b>capture theories</b>, where the rate is determined by the rate at which the reactants are captured into the long-range potential well. The rate constant can be significantly higher than the hard-sphere estimate, and the temperature dependence is weak because the collision cross-section is determined by the attractive potential rather than the thermal energy."
+              ],
+              "answer": 3
+            },
+            {
+              "question": "In transition state theory, the rate constant is given by k = (k_B T/h) e^{-ΔG‡/RT}. For a reaction that proceeds through a very loose transition state (e.g., a bond-breaking reaction), the entropy of activation (ΔS‡) is typically large and positive. How does a large positive ΔS‡ affect the pre-exponential factor and the rate constant, and what does this imply about the structure of the transition state?",
+              "options": [
+                "A large positive ΔS‡ has no effect on the pre-exponential factor; it only affects the activation energy. A positive ΔS‡ indicates that the reaction is exothermic",
+                "A large positive ΔS‡ decreases the pre-exponential factor because the entropy term is in the denominator; it reduces the rate constant. A positive ΔS‡ indicates a tight transition state",
+                "A large positive ΔS‡ increases the activation energy because ΔG‡ = ΔH‡ - TΔS‡; a positive ΔS‡ makes ΔG‡ more positive, decreasing the rate constant",
+                "A large positive ΔS‡ increases the pre-exponential factor (e^{ΔS‡/R} is large), leading to a larger rate constant at a given temperature. A positive ΔS‡ indicates that the transition state is more disordered (looser) than the reactants, with more degrees of freedom (e.g., the breaking bond has increased vibrational or rotational freedom). This is characteristic of dissociative reactions"
+              ],
+              "feedback": [
+                "ΔS‡ does affect the pre-exponential factor through the term e^{ΔS‡/R}. It is not independent of A.",
+                "A positive ΔS‡ increases the pre-exponential factor, not decreases it. It indicates a loose transition state, not a tight one.",
+                "ΔG‡ = ΔH‡ - TΔS‡. A positive ΔS‡ makes the term -TΔS‡ negative, so ΔG‡ is <b>lowered</b> (more negative), which increases the rate constant. It does not increase ΔG‡.",
+                "This is correct. In transition state theory, k = (k_B T/h) e^{ΔS‡/R} e^{-ΔH‡/RT}. A <b>large positive ΔS‡</b> means that e^{ΔS‡/R} > 1, so the <b>pre-exponential factor</b> (A ∝ e^{ΔS‡/R}) is <b>larger</b>. This leads to a <b>larger</b> rate constant at a given temperature (assuming ΔH‡ is not too large). A positive ΔS‡ indicates that the transition state is <b>more disordered</b> (looser) than the reactants, with more accessible configurations (e.g., the breaking of a bond creates more vibrational and rotational degrees of freedom, or the transition state has a higher entropy). This is characteristic of <b>dissociative</b> reactions (e.g., bond-breaking reactions) where the transition state resembles the products, which have more degrees of freedom than the reactants."
+              ],
+              "answer": 3
+            },
+            {
+              "question": "Collision theory and transition state theory are two approaches to understanding reaction rates. Collision theory is simpler and more intuitive, but it fails for reactions that do not occur in a single bimolecular step. Transition state theory is more general and can be applied to unimolecular, bimolecular, and complex reactions. Which theory provides a better description of the temperature dependence of the rate constant for a reaction that proceeds through a multi-step mechanism with a rate-determining step?",
+              "options": [
+                "Neither theory is suitable for multi-step reactions; the rate constants must be determined experimentally, and the theories cannot be applied",
+                "Both theories provide the same description because the Arrhenius equation is derived from both and gives the same temperature dependence",
+                "Transition state theory provides a better description because it can be applied to the rate-determining step, and the activation parameters (ΔH‡ and ΔS‡) for the overall reaction can be obtained from the Eyring equation. Collision theory is limited to elementary bimolecular reactions and cannot account for multi-step mechanisms",
+                "Collision theory provides a better description because all reactions ultimately involve collisions, and the multi-step mechanism can be reduced to a single collision step"
+              ],
+              "feedback": [
+                "TST can be applied to multi-step reactions through the rate-determining step and pre-equilibria. It is a powerful tool for understanding complex reaction kinetics.",
+                "The Arrhenius equation is empirical and can be applied to both simple and complex reactions, but the theoretical interpretations (collision theory vs. TST) differ. The temperature dependence from TST includes the pre-exponential factor's T dependence (ln k/T vs. 1/T), while collision theory does not.",
+                "This is correct. <b>Transition state theory (TST)</b> is more general than collision theory. It can be applied to the <b>rate-determining step</b> of a complex mechanism, and the activation parameters (ΔH‡ and ΔS‡) determined from an Eyring plot are for the overall reaction (in the sense that the rate-determining step gives the rate). Collision theory is limited to <b>elementary bimolecular reactions</b>; it assumes a single collision between two molecules. For a multi-step mechanism, the rate is determined by the slow step, and TST can be applied to that step by considering the transition state for that step. The overall rate constant can be expressed in terms of the equilibrium constants for the pre-equilibria and the rate constant for the RDS, and TST provides a framework for this. Collision theory cannot easily account for pre-equilibria or complex mechanisms.",
+                "Collision theory cannot be easily applied to multi-step mechanisms because the rate is not simply a collision between the reactants; it involves intermediates and a rate-determining step. TST is more appropriate."
+              ],
+              "answer": 2
+            },
+            {
+              "question": "In transition state theory, the rate constant is related to the equilibrium constant for the formation of the transition state: k = (k_B T/h) K‡. If a reaction has a very small equilibrium constant for the formation of the transition state (K‡ << 1), what does this imply about the Gibbs free energy of activation (ΔG‡), and how would the rate constant compare to the frequency factor (k_B T/h)?",
+              "options": [
+                "If K‡ << 1, then the rate constant is independent of (k_B T/h) because the equilibrium constant cancels out the frequency factor",
+                "If K‡ << 1, then the reaction is very fast because a small equilibrium constant means the transition state is very unstable, which favors rapid crossing to products",
+                "If K‡ << 1, then ΔG‡ = -RT ln K‡ is negative. The rate constant is larger than (k_B T/h) because the exponential term is greater than 1",
+                "If K‡ << 1, then ΔG‡ = -RT ln K‡ is large and positive. The rate constant k = (k_B T/h) K‡ is much smaller than (k_B T/h). This indicates that the reaction has a high free energy barrier and is slow"
+              ],
+              "feedback": [
+                "The rate constant is k = (k_B T/h) K‡, so it is proportional to K‡. The frequency factor does not cancel out; the rate constant is directly proportional to K‡.",
+                "A small K‡ means the transition state is high in free energy (unstable), which makes the reaction slow, not fast. The reaction is slow because the barrier is high.",
+                "A small K‡ gives a positive ΔG‡, not negative. The rate constant is smaller than (k_B T/h), not larger.",
+                "This is correct. The equilibrium constant K‡ for the formation of the transition state is related to the Gibbs free energy of activation by ΔG‡ = -RT ln K‡ (for the standard state). If K‡ << 1, then ln K‡ is negative, so ΔG‡ = -RT (negative) = positive and <b>large</b>. A large positive ΔG‡ means that the transition state is <b>much higher in free energy</b> than the reactants, so the formation of the transition state is <b>unfavorable</b>. The rate constant k = (k_B T/h) K‡ is much smaller than (k_B T/h). The frequency factor (k_B T/h) ≈ 6 × 10¹² s⁻¹ is the maximum possible rate (when K‡ = 1), and a small K‡ reduces the rate significantly."
+              ],
+              "answer": 3
+            },
+            {
+              "question": "Collision theory predicts that the rate constant for a bimolecular reaction is proportional to the collision frequency and the Boltzmann factor. However, for reactions in which the reactants have a significant electrostatic attraction (e.g., ion-ion reactions), the rate constant can be much larger than the collision theory prediction. What is the reason for this enhancement, and how does the ion-ion electrostatic attraction affect the effective activation energy?",
+              "options": [
+                "The electrostatic attraction between ions is repulsive for like-charged ions and attractive for oppositely charged ions; the effect on the rate constant is unpredictable and depends on the charge of the ions",
+                "The electrostatic attraction between ions increases the activation energy because the ions must overcome the attraction to react; the rate constant is smaller than the collision theory prediction",
+                "The electrostatic attraction between ions does not affect the activation energy; it only affects the pre-exponential factor by increasing the collision frequency. The rate constant is increased because the collision frequency is higher",
+                "The electrostatic attraction between ions lowers the effective activation energy because the ions are attracted to each other, reducing the energy required to bring them together. The rate constant is enhanced because the collision cross-section is increased by the attractive potential, and the effective activation energy is the sum of the chemical activation energy and the electrostatic interaction energy. This is described by the Brønsted-Bjerrum equation for ionic reactions"
+              ],
+              "feedback": [
+                "For oppositely charged ions, the attraction is consistent; the effect is predictable and described by the Brønsted-Bjerrum equation.",
+                "The electrostatic attraction lowers the activation energy, not increases it. The rate constant is larger, not smaller.",
+                "The electrostatic attraction affects both the activation energy (through the interaction energy) and the pre-exponential factor (through the enhanced collision cross-section). It is not just a pre-exponential factor effect.",
+                "This is correct. For reactions between ions, the electrostatic interactions between the ions significantly affect the rate. For <b>oppositely charged ions</b>, the electrostatic attraction lowers the effective activation energy because the ions are drawn together, reducing the energy required to overcome the repulsion. The <b>Brønsted-Bjerrum equation</b> describes the effect of ionic strength on the rate constant for ionic reactions, and it accounts for the electrostatic interactions. The rate constant for ion-ion reactions can be much larger than the hard-sphere collision theory prediction because the attractive potential increases the collision cross-section (the ions are 'captured' at longer distances) and lowers the effective activation energy. The effective activation energy is the sum of the chemical activation energy and the electrostatic interaction energy (which is negative for attraction, thus lowering the total barrier)."
+              ],
+              "answer": 3
+            },
+            {
+              "question": "In transition state theory, the rate constant is related to the Gibbs free energy of activation: k = (k_B T/h) e^{-ΔG‡/RT}. If a student measures the rate constant for a reaction at 300 K and finds k = 1.0 × 10⁶ s⁻¹, what is the Gibbs free energy of activation (ΔG‡) for the reaction? (Assume k_B T/h ≈ 6 × 10¹² s⁻¹ at 300 K).",
+              "options": [
+                "ΔG‡ = -RT ln(k / (k_B T/h)) = -2494 × ln(1.0 × 10⁶ / 6 × 10¹²) = -2494 × (-15.6) ≈ 38.9 kJ mol⁻¹, but the student must use the Eyring equation and include the transmission coefficient",
+                "ΔG‡ = RT ln(k / (k_B T/h)) = 2494 × ln(1.0 × 10⁶ / 6 × 10¹²) = 2494 × (-15.6) ≈ -38,900 J mol⁻¹ (negative), which is unphysical",
+                "ΔG‡ = -RT ln(k / (k_B T/h)) = -8.314 × 300 × ln(1.0 × 10⁶ / 6 × 10¹²) = -2494 × ln(1.67 × 10⁻⁷) = -2494 × (-15.6) ≈ 38,900 J mol⁻¹ ≈ 38.9 kJ mol⁻¹",
+                "ΔG‡ = -RT ln(k) = -8.314 × 300 × ln(1.0 × 10⁶) = -2494 × 13.8 ≈ -34,400 J mol⁻¹ (negative), which is unphysical"
+              ],
+              "feedback": [
+                "The calculation is correct. The transmission coefficient κ is not included here because it is typically set to 1 in the standard Eyring equation, and the question does not provide information about κ.",
+                "The sign is correct: ΔG‡ is positive (the transition state is higher in free energy than the reactants). A negative ΔG‡ would indicate that the transition state is lower in free energy than the reactants, which is physically unrealistic for a stable transition state.",
+                "This is correct. The Eyring equation (with κ = 1) is k = (k_B T/h) e^{-ΔG‡/RT}. Solving for ΔG‡: ΔG‡ = -RT ln(k / (k_B T/h)). Plugging in the values: k_B T/h ≈ 6 × 10¹² s⁻¹, k = 1.0 × 10⁶ s⁻¹, T = 300 K, R = 8.314 J mol⁻¹ K⁻¹. k/(k_B T/h) = 1.0 × 10⁶ / 6 × 10¹² = 1.67 × 10⁻⁷. ln(1.67 × 10⁻⁷) ≈ -15.6. ΔG‡ = -8.314 × 300 × (-15.6) = -2494 × (-15.6) ≈ 38,900 J mol⁻¹ ≈ 38.9 kJ mol⁻¹. This is a typical value for a moderately fast reaction at room temperature.",
+                "This would be the correct expression if the pre-exponential factor (k_B T/h) were 1, but it is not. The student must include the frequency factor."
+              ],
+              "answer": 2
+            },
+            {
+              "question": "Collision theory predicts that the rate constant for a bimolecular reaction is k = P Z e^{-Ea/RT}. For a reaction between two molecules with a large collision diameter, the collision frequency Z is large, and the rate constant is predicted to be large. However, for large molecules, the steric factor P can be very small, which can offset the large collision frequency. If a student measures the rate constant for a reaction between two large molecules and finds it to be much smaller than the collision theory prediction (even after accounting for the activation energy), what does this imply about the reaction mechanism, and what additional factor might be important?",
+              "options": [
+                "The small rate constant implies that the steric factor P is very small, indicating that the reaction has strict orientation requirements. Additionally, for large molecules, the reaction may be diffusion-controlled in solution, or there may be significant entropy losses upon forming the transition state (negative ΔS‡), which further reduces the rate constant",
+                "The small rate constant implies that the reaction is actually unimolecular, and the collision theory is not applicable; the student should use the Lindemann mechanism",
+                "The small rate constant implies that the activation energy is negative, which is physically impossible; the student must have made an error in the measurement",
+                "The small rate constant implies that the reaction is at equilibrium, and the net rate is zero; the measured rate constant is not meaningful"
+              ],
+              "feedback": [
+                "This is correct. For reactions between large molecules, the steric factor P can be very small (e.g., 10⁻² to 10⁻⁶) because the molecules must approach with a specific orientation for the reactive bonds to align. Additionally, in solution, the reaction may be <b>diffusion-controlled</b> (the rate is limited by the diffusion of the large molecules to each other), and the entropy of activation (ΔS‡) is often <b>negative</b> because the transition state is more ordered (the large molecules lose translational and rotational degrees of freedom upon forming the encounter complex). The combination of a small steric factor, a negative ΔS‡, and diffusion limitations can lead to a rate constant that is much smaller than the simple collision theory prediction.",
+                "The reaction could be bimolecular, but the orientation requirements are strict. Collision theory can be applied to bimolecular reactions, but the steric factor accounts for the orientation.",
+                "A small rate constant does not imply a negative activation energy; it implies a small steric factor or a negative entropy of activation. The student's measurement could be correct.",
+                "The reaction is not at equilibrium; the small rate constant is due to the kinetic factors (orientation, entropy, diffusion), not equilibrium."
+              ],
+              "answer": 0
+            },
+            {
+              "question": "In transition state theory, the rate constant is given by k = (k_B T/h) e^{ΔS‡/R} e^{-ΔH‡/RT}. For a reaction in solution, the entropy of activation (ΔS‡) is often negative because the reactants lose translational and rotational degrees of freedom when forming the transition state. If a student measures a negative ΔS‡ for a reaction, what does this imply about the rate constant compared to a reaction with a positive ΔS‡ (assuming the same ΔH‡ and temperature)?",
+              "options": [
+                "A negative ΔS‡ implies that the rate constant is the same as a reaction with a positive ΔS‡ because the entropy term cancels out with the enthalpy term",
+                "A negative ΔS‡ implies that the activation energy is lower, so the rate constant is larger despite the negative entropy",
+                "A negative ΔS‡ implies that the rate constant is larger because the negative entropy means the transition state is more stable, lowering the free energy of activation",
+                "A negative ΔS‡ implies that the rate constant is smaller than a reaction with a positive ΔS‡ (assuming the same ΔH‡ and T), because e^{ΔS‡/R} is less than 1 for negative ΔS‡. The transition state is more ordered (tighter) than the reactants, which reduces the rate"
+              ],
+              "feedback": [
+                "The entropy and enthalpy terms do not cancel out; they are independent contributions to the free energy of activation. A negative ΔS‡ reduces the rate, while a positive ΔS‡ increases it.",
+                "The activation energy (ΔH‡) is independent of ΔS‡. A negative ΔS‡ does not imply a lower ΔH‡; it affects the pre-exponential factor, not the activation energy.",
+                "A negative ΔS‡ does not make the transition state more stable; it makes the entropic contribution less favorable. The free energy of activation is ΔG‡ = ΔH‡ - TΔS‡, and a negative ΔS‡ makes ΔG‡ more positive (since -TΔS‡ > 0), which reduces the rate.",
+                "This is correct. The rate constant from TST is k = (k_B T/h) e^{ΔS‡/R} e^{-ΔH‡/RT}. For a <b>negative ΔS‡</b>, e^{ΔS‡/R} is <b>less than 1</b>, so the pre-exponential factor is smaller compared to a reaction with a positive ΔS‡ (where e^{ΔS‡/R} > 1). This means that at a given temperature and ΔH‡, the rate constant is <b>smaller</b> for a reaction with a negative ΔS‡. A negative ΔS‡ indicates that the transition state is <b>more ordered</b> (tighter) than the reactants, which is entropically unfavorable and reduces the rate. This is common for reactions in solution, where the reactants lose translational and rotational freedom upon forming the transition state."
+              ],
+              "answer": 3
+            },
+            {
+              "question": "Collision theory and transition state theory both provide models for understanding reaction rates, but they make different assumptions about the nature of the reaction. Collision theory assumes that the reaction occurs upon a single collision, while transition state theory assumes that the reactants are in equilibrium with the transition state. For a reaction that proceeds through a long-lived intermediate, which theory is more appropriate, and why?",
+              "options": [
+                "Collision theory is more appropriate because the intermediate is formed by a collision, and the rate is still determined by the collision frequency; the lifetime of the intermediate is irrelevant",
+                "Neither theory is appropriate for reactions with long-lived intermediates; the kinetics must be treated using the steady-state approximation without invoking a transition state",
+                "Both theories are equally appropriate; the choice depends on whether the reaction is in the gas phase or in solution",
+                "Transition state theory is more appropriate because it can account for the formation of the intermediate through a pre-equilibrium and the subsequent reaction of the intermediate. The rate can be expressed as k = k_2 K_eq, where K_eq is the equilibrium constant for the formation of the intermediate. Collision theory, which assumes a single collision, cannot easily account for the lifetime of the intermediate"
+              ],
+              "feedback": [
+                "Collision theory cannot account for the intermediate's lifetime because it assumes a single collision; the rate is not simply the collision frequency, and the intermediate formation is a pre-equilibrium.",
+                "TST can be applied to reactions with intermediates by using the pre-equilibrium approximation and treating the rate-determining step with TST. It is appropriate for such reactions.",
+                "TST is generally more appropriate for complex mechanisms, regardless of the phase. The choice is not based on the phase but on the mechanism.",
+                "This is correct. For a reaction that proceeds through a long-lived intermediate (e.g., A + B ⇌ AB* (fast), AB* → products (slow)), the rate is determined by the <b>pre-equilibrium</b> formation of the intermediate and the <b>slow decay</b> of the intermediate. Transition state theory can be applied to the rate-determining step (the decay of the intermediate) by considering the transition state for that step, and the overall rate constant is k_obs = k_2 K_eq, where K_eq is the equilibrium constant for the intermediate formation. Collision theory, which assumes that the reaction occurs in a single bimolecular collision, cannot account for the lifetime of the intermediate or the pre-equilibrium. TST provides a more flexible framework for such mechanisms."
+              ],
+              "answer": 3
+            },
+            {
+              "question": "The Arrhenius equation can be derived from both collision theory and transition state theory. In collision theory, the pre-exponential factor A is P Z, where Z is the collision frequency and P is the steric factor. In transition state theory, A is related to the entropy of activation. If a student measures the pre-exponential factor A for a reaction and finds it to be 1.0 × 10¹⁰ s⁻¹ (for a first-order reaction), what can they infer about the entropy of activation (ΔS‡) for the reaction?",
+              "options": [
+                "The pre-exponential factor A is independent of the entropy of activation; A is determined solely by the collision frequency and the steric factor, which are not related to entropy",
+                "For a first-order reaction, A = (k_B T/h) e^{ΔS‡/R} (ignoring the transmission coefficient). Using (k_B T/h) ≈ 6 × 10¹² s⁻¹, A/e^{ΔS‡/R} = 1.0 × 10¹⁰ / 6 × 10¹² = 1.67 × 10⁻³, so e^{ΔS‡/R} = 1.67 × 10⁻³. Therefore, ΔS‡ = R ln(1.67 × 10⁻³) ≈ -53.0 J mol⁻¹ K⁻¹. This indicates a negative entropy of activation, meaning the transition state is more ordered than the reactants",
+                "A = (k_B T/h) e^{-ΔS‡/R}, so ΔS‡ = -R ln(A/(k_B T/h)) = -R ln(1.67 × 10⁻³) ≈ +53.0 J mol⁻¹ K⁻¹, indicating a positive entropy of activation",
+                "A = (k_B T/h) e^{ΔS‡/R}, but the value of A does not provide information about ΔS‡ because the transmission coefficient (κ) is unknown"
+              ],
+              "feedback": [
+                "In transition state theory, A is related to ΔS‡. It is not independent of entropy.",
+                "This is correct. For a unimolecular reaction, the Eyring equation gives A = (k_B T/h) e^{ΔS‡/R} (if we ignore the transmission coefficient and the T dependence of A). Solving for ΔS‡: ΔS‡ = R ln(A / (k_B T/h)). With A = 1.0 × 10¹⁰ s⁻¹ and (k_B T/h) ≈ 6 × 10¹² s⁻¹, the ratio is 1.0 × 10¹⁰ / 6 × 10¹² = 1.67 × 10⁻³. ln(1.67 × 10⁻³) ≈ -6.40. ΔS‡ = 8.314 × (-6.40) ≈ -53.2 J mol⁻¹ K⁻¹. A negative ΔS‡ indicates that the transition state is <b>more ordered</b> (tighter) than the reactants, which is consistent with a small pre-exponential factor A (much smaller than the typical value of 10¹³ s⁻¹).",
+                "The relationship is A ∝ e^{ΔS‡/R}, so a small A gives a negative ΔS‡, not a positive one.",
+                "While the transmission coefficient κ could be less than 1, the standard Eyring equation assumes κ = 1 for the maximum rate. If κ is unknown, the student cannot determine the exact ΔS‡, but the sign of ΔS‡ can still be inferred if κ is close to 1. A small A suggests a negative ΔS‡."
+              ],
+              "answer": 1
+            }
+          ]
+
+      };
+    </script>
+
+    <script src="./assets/quiz_script.js" defer></script>
+</head>
+
+<body>
+  <a id="indexPageBtn" href="./index.html" class="btn">⌂</a>
+
+  <dialog id="resetModal">
+    <div class="icon-warning " style="display: flex;"><div class="icon-content">!</div></div>
+    <h2>Reset Quiz</h2>
+    <p>Are you sure?</p>
+    
+    <!-- Close Button -->
+    <button id="closeModalBtn" commandFor="resetModal" command="close" class="btn">Close</button>
+    <button id="resetModalBtn" class="btn">Reset</button>
+  </dialog>
+
+    <div class="container">
+        <h1><span id="quick_check">Quick Check</span><span id="quiz_title">Placeholder</span></h1>
+
+        <div class="score-board">
+            <div class="score-item">
+                <span class="score-val c-purple" id="val-score">0%</span>
+                <span class="score-lbl">Score</span>
+            </div>
+            <div class="score-item">
+                <span class="score-val c-green" id="val-correct">0</span>
+                <span class="score-lbl">Correct</span>
+            </div>
+            <div class="score-item">
+                <span class="score-val c-red" id="val-wrong">0</span>
+                <span class="score-lbl">Wrong</span>
+            </div>
+            <div class="score-item">
+                <span class="score-val c-grey" id="val-remain">0</span>
+                <span class="score-lbl">Remaining</span>
+            </div>
+        </div>
+
+        <div class="btn-reset-container">
+            <button class="btn reset-btn" command="show-modal" commandFor="resetModal">Reset Quiz</button>
+        </div>
+        <div id="questions-container"></div>
+    </div>
+
+
+
+</body>
+
+</html>
